@@ -12,6 +12,6 @@ And get beautiful images like these...
 
 ![](examples/test.png)
 
-![](examples/test1.png)
+![](examples/test0.png)
 
 ![](examples/test2.png)
