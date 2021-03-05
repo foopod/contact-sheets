@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Sheet</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Contact Sheet</h1>
+    <div id="open">
+        <input type="file" id="dirs" hidden="hidden"/>
+        <button id="uploadButton" type="button" class="button">
+            choose folder
+        </button>
+        <script type="module" src="./renderer.js"></script>
+    </div>
+    <div id="config">
+        <div id="configContainer">
+            <div id="configPanel">
+                <div class="maxWidth">
+                    <h2>Options</h2>
+                    <p>Columns</p>
+                    <input type="number" id="columns" placeholder="columns" value="5"/>
+                    <input type="number" id="size" placeholder="horizontal pixels" value="2000" />
+                    <!--</1><input type="number" id="aspect" placeholder="aspect ratio" value="0.66"/>-->
+                    <p>Colour</p>
+                    <input type="color" id="colour"/>
+                    <div id="outputPanel">
+                        <button id="create">Create</button>
+                        <p><small>*saves into input folder</small></p>
+                    </div>
+                </div>
+            </div>
+            <div id="previewPanel">
+                <h2>Preview</h2>
+                <canvas id="preview" width="300" height="400"></canvas>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "contact-sheet",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "canvas": "^2.7.0",
+    "electron": "^11.3.0"
+  }
+}

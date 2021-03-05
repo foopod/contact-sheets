@@ -1,0 +1,77 @@
+@font-face {
+    font-family: Bungee;
+    src: url("Bungee-Regular.ttf") format("truetype");
+}
+
+html, body{
+    margin : 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Bungee';
+    letter-spacing: 0.1em;
+    color: #333;
+    text-align: center;
+}
+
+input{
+    width: 200px;
+    padding: 0.5em;
+    margin:0.5em;
+}
+
+button{
+    border: 0;
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+}
+
+#uploadButton{
+    margin-top: 4em;
+    font-size: 2em;
+}
+
+#configContainer {
+    margin: auto;
+    display: flex;
+}
+
+#config input,#config canvas {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+#config canvas{
+    width: 35%;
+}
+
+#size{
+    display: none !important;
+}
+
+#configPanel, #previewPanel{
+    width: 50%;
+}
+
+.maxWidth{
+    max-width: 60%;
+    margin: auto;
+    display: block;
+}
+
+#outputPanel{
+    margin: auto;
+    display: block;
+    text-align: center;
+    margin-top:4em;
+}
