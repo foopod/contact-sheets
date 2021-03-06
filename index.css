@@ -61,6 +61,11 @@ button{
     margin: auto;
     margin-top: 1em;
     font-family: 'Bungee';
+    transition: all .1s ease-in-out; 
+}
+
+button:hover{
+    transform: scale(1.1); 
 }
 
 #savedText{
@@ -72,6 +77,11 @@ button{
     top:30px;
     left:30px;
     width: 50px;
+    transition: all .1s ease-in-out; 
+}
+
+#back:hover{
+    transform: scale(1.1); 
 }
 
 #uploadButton{
