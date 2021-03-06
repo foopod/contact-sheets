@@ -21,6 +21,9 @@ function init(){
   document.getElementById("okayButton").addEventListener("click", ()=>{
     setView("config")
   })
+  document.getElementById("back").addEventListener("click", ()=>{
+    setView("open")
+  })
 }
 
 function setView(view){

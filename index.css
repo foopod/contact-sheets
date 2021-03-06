@@ -67,6 +67,13 @@ button{
     font-family: sans-serif;
 }
 
+#back{
+    position: absolute;
+    top:30px;
+    left:30px;
+    width: 50px;
+}
+
 #uploadButton{
     margin-top: 4em;
     font-size: 2em;
