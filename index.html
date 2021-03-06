@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Contact Sheet</title>
+    <title>Contact Sheets</title>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Contact Sheet</h1>
+    <h1>Contact Sheets</h1>
     <div id="open">
         <input type="file" id="dirs" hidden="hidden"/>
         <button id="uploadButton" type="button" class="button">
@@ -38,7 +38,19 @@
                 <canvas id="preview" width="300" height="400"></canvas>
             </div>
         </div>
-        
+    </div>
+    <div id="loading">
+        <div class="center">
+            <p>Generating Contact Sheet</p>
+            <image id="spinner" src="./spinner.png"></image>
+        </div>
+    </div>
+    <div id="saved">
+        <div class="center">
+            <p>Saved File to </p>
+            <p id="savedText"></p>
+            <button id="okayButton">Okay</button>
+        </div>
     </div>
 </body>
 </html>

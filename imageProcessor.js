@@ -1,6 +1,5 @@
 const fs = require('fs')
 const { createCanvas, loadImage } = require('canvas')
-const smartcrop = require('smartcrop')
 
 const processFiles = function(options, callback){
     const padding = 20;

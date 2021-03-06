@@ -6,6 +6,7 @@
 html, body{
     margin : 0;
     padding: 0;
+    font-family: 'Bungee';
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -15,10 +16,37 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
 }
 
+@keyframes spinning {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+  }
+  #spinner {
+    animation-name: spinning;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+  }
+
+  .center{
+    text-align: center;
+    margin-top: 12em;
+  }
+
+  #loading{
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      position: absolute;
+      top:0;
+      left:0;
+  }
+
 input{
     width: 200px;
     padding: 0.5em;
     margin:0.5em;
+    font-family: 'Bungee';
 }
 
 button{
@@ -32,6 +60,11 @@ button{
     display: block;
     margin: auto;
     margin-top: 1em;
+    font-family: 'Bungee';
+}
+
+#savedText{
+    font-family: sans-serif;
 }
 
 #uploadButton{

@@ -14,17 +14,28 @@ function init(){
   });
 
   document.getElementById("create").addEventListener("click", ()=>{
+    setView("loading")
     ipcRenderer.send('create-message', options)
+  })
+
+  document.getElementById("okayButton").addEventListener("click", ()=>{
+    setView("config")
   })
 }
 
 function setView(view){
   document.getElementById("open").style.display = "none"
   document.getElementById("config").style.display = "none"
+  document.getElementById("loading").style.display = "none"
+  document.getElementById("saved").style.display = "none"
   if(view == "open"){
     document.getElementById("open").style.display = "block"
   } else if(view == "config"){
     document.getElementById("config").style.display = "block"
+  } else if(view == "loading"){
+    document.getElementById("loading").style.display = "block"
+  } else if(view == "saved"){
+    document.getElementById("saved").style.display = "block"
   }
 }
 
@@ -97,8 +108,8 @@ ipcRenderer.on('selected-dirs', (event, args) => {
 })
 
 ipcRenderer.on('create-reply', (event, args) => {
-  console.log(args)
+  setView("saved")
+  document.getElementById("savedText").innerText = `${options.path}`
 })
-
 
 ipcRenderer.send('asynchronous-message', 'async ping')
