@@ -1,4 +1,4 @@
-const {ipcRenderer} = require('electron')
+const {ipcRenderer,shell} = require('electron')
 let options
 let uiElements
 
@@ -23,6 +23,9 @@ function init(){
   })
   document.getElementById("back").addEventListener("click", ()=>{
     setView("open")
+  })
+  document.getElementById("openFolder").addEventListener("click", ()=>{
+    shell.openPath(options.path)
   })
 }
 
@@ -67,7 +70,7 @@ function drawPreview(){
   options.padding = document.getElementById("padding").value
 
   //console.log(`${noFiles} files, they are ${fileList}, with ${columns} columns, a width of ${width} and color ${colour}`)
-  let padding = Math.floor(inputpadding/100 * canvas.width)
+  let padding = Math.floor(inputpadding/100 * canvas.width)*2
   let previewWidth = canvas.width
   let columnWidth = previewWidth/columns
   let rows = Math.ceil(noFiles/columns)

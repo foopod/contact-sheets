@@ -1,3 +1,7 @@
+/* colours 
+["333333","ccfccb","ef798a","95a3b3","3f84e5"]
+*/
+
 @font-face {
     font-family: Bungee;
     src: url("Bungee-Regular.ttf") format("truetype");
@@ -7,12 +11,17 @@ html, body{
     margin : 0;
     padding: 0;
     font-family: 'Bungee';
+    background-color: #333;
+    color:#fff;
+}
+
+*:focus{
+    outline:none;
 }
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'Bungee';
     letter-spacing: 0.1em;
-    color: #333;
     text-align: center;
 }
 
@@ -36,7 +45,7 @@ h1,h2,h3,h4,h5,h6{
   #loading{
       width: 100%;
       height: 100%;
-      background-color: white;
+      background-color: #333;
       position: absolute;
       top:0;
       left:0;
@@ -51,8 +60,8 @@ input{
 
 button{
     border: 0;
-    background-color: #333;
-    color: white;
+    background-color: #3f84e5;
+    color: #fff;
     font-size: 1em;
     width: 6em;
     height: 6em;
@@ -66,6 +75,18 @@ button{
 
 button:hover{
     transform: scale(1.1); 
+}
+
+.buttonContainer{
+    display:inline-flex;
+}
+
+#openFolder, #okayButton{
+    margin:1em;
+}
+
+#openFolder{
+    background-color: #95a3b3;
 }
 
 .plainText{
