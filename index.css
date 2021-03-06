@@ -110,7 +110,7 @@ button:hover{
     width: 35%;
 }
 
-#size{
+#size, #padding{
     display: none !important;
 }
 

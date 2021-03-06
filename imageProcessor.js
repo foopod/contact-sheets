@@ -2,8 +2,6 @@ const fs = require('fs')
 const { createCanvas, loadImage } = require('canvas')
 
 const processFiles = function(options, callback){
-    const padding = 20;
-
     const imageList = options.filenames
     const numCols = options.columns
 
@@ -21,7 +19,7 @@ const processFiles = function(options, callback){
 
         let rowHeight = columnWidth * aspect
         const fileheight = rowHeight * numRows;
-
+        const padding = Math.floor(options.padding/100 * filewidth)
 
         const canvas = createCanvas(filewidth+padding, fileheight+padding)
         const context = canvas.getContext('2d')

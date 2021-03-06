@@ -6,7 +6,7 @@ function init(){
   setView("open");
 
   // draw preview every time a ui element changes
-  uiElements = [document.getElementById("columns"),document.getElementById("size"),document.getElementById("colour")]
+  uiElements = [document.getElementById("columns"),document.getElementById("size"),document.getElementById("colour"),document.getElementById("padding")]
   uiElements.forEach(element => {
     element.addEventListener("change",()=>{
       drawPreview()
@@ -58,14 +58,16 @@ function drawPreview(){
   let columns = document.getElementById("columns").value
   let width = document.getElementById("size").value
   let colour = document.getElementById("colour").value
+  let inputpadding = document.getElementById("padding").value
   let aspect = 1
 
   options.columns = document.getElementById("columns").value
   options.width = document.getElementById("size").value
   options.colour = document.getElementById("colour").value
+  options.padding = document.getElementById("padding").value
 
   //console.log(`${noFiles} files, they are ${fileList}, with ${columns} columns, a width of ${width} and color ${colour}`)
-  let padding = 4
+  let padding = Math.floor(inputpadding/100 * canvas.width)
   let previewWidth = canvas.width
   let columnWidth = previewWidth/columns
   let rows = Math.ceil(noFiles/columns)
