@@ -42,7 +42,6 @@ const processFiles = function(options, callback){
                 })
             });
             promises.push(promise);
-            
         });
 
         Promise.all(promises).then(() => {
@@ -51,13 +50,11 @@ const processFiles = function(options, callback){
             callback()
         });
     })
-    
 }
 
 module.exports = processFiles;
 
 const drawImage = (context, image, x, y, width, height,aspect) => {
-    console.log("draw");
     if(image.width>image.height){ 
         // landscape
         if(image.width*aspect>image.height){

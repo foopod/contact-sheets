@@ -68,8 +68,13 @@ button:hover{
     transform: scale(1.1); 
 }
 
-#savedText{
+.plainText{
     font-family: sans-serif;
+}
+
+#slow{
+    display: none;
+    font-size: 0.8em;
 }
 
 #back{

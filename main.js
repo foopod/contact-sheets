@@ -84,11 +84,3 @@ ipcMain.on('create-message', (event, arg) => {
   })
   
 })
-
-// Event handler for asynchronous incoming messages
-ipcMain.on('asynchronous-message', (event, arg) => {
-  console.log(arg)
-
-  // Event emitter for sending asynchronous messages
-  event.sender.send('asynchronous-reply', 'async pong')
-})

@@ -31,12 +31,16 @@ function setView(view){
   document.getElementById("config").style.display = "none"
   document.getElementById("loading").style.display = "none"
   document.getElementById("saved").style.display = "none"
+  document.getElementById("slow").style.display = "none"
   if(view == "open"){
     document.getElementById("open").style.display = "block"
   } else if(view == "config"){
     document.getElementById("config").style.display = "block"
   } else if(view == "loading"){
     document.getElementById("loading").style.display = "block"
+    setTimeout(() => {
+      document.getElementById("slow").style.display = "block"
+    }, 7000);
   } else if(view == "saved"){
     document.getElementById("saved").style.display = "block"
   }
@@ -114,5 +118,3 @@ ipcRenderer.on('create-reply', (event, args) => {
   setView("saved")
   document.getElementById("savedText").innerText = `${options.path}`
 })
-
-ipcRenderer.send('asynchronous-message', 'async ping')
